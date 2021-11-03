@@ -29,7 +29,7 @@ namespace Operations
                 return "";
             }
 
-            if(rotation <= 0)
+            if(rotation <= 0 || rotation > originalString.Length)
             {
                 return originalString;
             }

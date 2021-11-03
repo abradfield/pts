@@ -41,5 +41,14 @@ namespace Operations.Tests
 
             Assert.That(result, Is.EqualTo(value));
         }
+
+        [Test]
+        public void Should_handle_rotation_longer_than_length()
+        {
+            string value = "hello";
+            var result = Operations.StringRotation(value, value.Length + 1);
+
+            Assert.That(result, Is.EqualTo(value));
+        } 
     }
 }
