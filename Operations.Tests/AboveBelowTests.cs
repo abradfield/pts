@@ -19,26 +19,14 @@ namespace Operations.Tests
             }
 
             [Test]
-            public void Should_handle_comparison()
+            public void Should_handle_positive_comparison()
             {
-                var numbers = new List<int> { 1, 2, 3 };
-                var result = Operations.AboveBelow(numbers, 0);
+                var numbers = new List<int> { 1, 2, 3, 4, 5, 6};
+                var result = Operations.AboveBelow(numbers, 3);
 
                 Assert.Multiple(() => {
                     Assert.That(result["above"], Is.EqualTo(3));
-                    Assert.That(result["below"], Is.EqualTo(0));
-                });
-            }
-
-            [Test]
-            public void Should_handle_positive_comparison()
-            {
-                var numbers = new List<int> { 1, 2, 3 };
-                var result = Operations.AboveBelow(numbers, 2);
-
-                Assert.Multiple(() => {
-                    Assert.That(result["above"], Is.EqualTo(1));
-                    Assert.That(result["below"], Is.EqualTo(1));
+                    Assert.That(result["below"], Is.EqualTo(2));
                 });
             }
 

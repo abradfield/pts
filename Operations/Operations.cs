@@ -29,14 +29,15 @@ namespace Operations
                 return "";
             }
 
-            if(rotation <= 0 || rotation > originalString.Length)
+            if(rotation <= 0 || rotation % originalString.Length == 0)
             {
                 return originalString;
             }
-
+            
+            var s = rotation % originalString.Length;
             var doubledOriginalString = originalString + originalString;
 
-            return doubledOriginalString.Substring(rotation, originalString.Length);
+            return doubledOriginalString.Substring(originalString.Length - s, originalString.Length);
         }
     }
 }
