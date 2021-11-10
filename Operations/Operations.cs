@@ -34,10 +34,10 @@ namespace Operations
                 return originalString;
             }
             
-            var s = rotation % originalString.Length;
+            var offset = rotation % originalString.Length;
             var doubledOriginalString = originalString + originalString;
 
-            return doubledOriginalString.Substring(originalString.Length - s, originalString.Length);
+            return doubledOriginalString.Substring(originalString.Length - offset, originalString.Length);
         }
     }
 }

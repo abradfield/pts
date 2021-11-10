@@ -7,7 +7,7 @@ namespace Operations.Tests
     public class AboveBelowTests
     {
         [Test]
-            public void Should_handle_null_list_of_numbers()
+            public void Should_handle_empty_list_of_numbers()
             {
                 var numbers = new List<int>();
                 var result = Operations.AboveBelow(numbers, 1);
